@@ -1,0 +1,28 @@
+package com.mycompany.banksystem;
+
+public class User {
+    public enum Role { ADMIN, CUSTOMER }
+
+    private String username;
+    private String password;
+    private Role role;
+
+    public User(String username, String password, Role role) {
+        this.username = username;
+        this.password = password;
+        this.role = role;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public boolean checkPassword(String password) {
+        return this.password.equals(password);
+    }
+
+    public Role getRole() {
+        return role;
+    }
+}
+
